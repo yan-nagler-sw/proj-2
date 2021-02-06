@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Pulling the code...'
 
-                dir(~/Desktop/dev-ops-course/proj/proj-2) {
+                dir('~/Desktop/dev-ops-course/proj/proj-2') {
                     sh 'rm -rf run'
                     sh 'mkdir -p run'
                     sh 'cd run'
