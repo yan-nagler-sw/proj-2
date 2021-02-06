@@ -19,7 +19,6 @@ pipeline {
                 sh 'mkdir -p run'
                 sh 'cd run'
 
-
 //                sh 'git init'
 //                sh 'git remote add origin https://github.com/yan-nagler-sw/proj-2.git'
 //                sh 'git pull origin master'
