@@ -13,14 +13,11 @@ pipeline {
             steps {
                 echo 'Pulling the code...'
 
-                sh 'cd ~/Desktop/dev-ops-course/proj/proj-2'
-
-                sh 'rm -rf run'
-                sh 'mkdir -p run'
-                sh 'cd run'
-
-                sh 'touch hui'
-                sh 'ls -la'
+                dir(~/Desktop/dev-ops-course/proj/proj-2) {
+                    sh 'rm -rf run'
+                    sh 'mkdir -p run'
+                    sh 'cd run'
+                }
 
 //                sh 'git init'
 //                sh 'git remote add origin https://github.com/yan-nagler-sw/proj-2.git'
