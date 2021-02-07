@@ -5,8 +5,6 @@ pipeline {
             crs_dir = "/Users/${usr}/Desktop/dev-ops-course"
             env_dir = "$crs_dir/env"
             py_dir = "$crs_dir/py"
-
-            echo "py_dir: $py_dir"
         }
     stages {
         stage('handle-git') {
