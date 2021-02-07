@@ -7,7 +7,7 @@ pipeline {
             py_dir = "$crs_dir/py"
 
             py = "python3.9"
-            pkgs_dir="$py_dir/venv/lib/$py/site-packages"
+            pkgs_dir = "$py_dir/venv/lib/$py/site-packages"
         }
     stages {
         stage("handle-git") {
