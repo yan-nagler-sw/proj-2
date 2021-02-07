@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Running Python script: backend_testing_db.py...'
                 sh '''
-                    export PYTHONPATH="$py_dir/venv/lib/python3.9/site-packages/:\$PYTHONPATH"
+                    export PYTHONPATH="$py_dir/venv/lib/python3.9/site-packages/:\\$PYTHONPATH"
                     python3.9 backend_testing_db.py
                 '''
 
