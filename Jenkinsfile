@@ -9,10 +9,10 @@ pipeline {
                 git 'https://github.com/yan-nagler-sw/proj-2.git'
             }
         }
-        
         stage('run-py-rest-app') {
             steps {
                 echo 'Running Python script: rest_app.py...'
+                sh 'python3.9 backend_testing_db.py'
             }
         }
         stage('run-py-web-app') {
