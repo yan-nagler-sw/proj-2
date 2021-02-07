@@ -23,6 +23,7 @@ pipeline {
                 '''
             }
         }
+/*
         stage('run-py-rest-app') {
             steps {
                 echo 'Running Python script: rest_app.py...'
@@ -78,5 +79,6 @@ pipeline {
                 '''
             }
         }
+*/
     }
 }
