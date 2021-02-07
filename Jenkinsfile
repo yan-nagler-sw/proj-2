@@ -1,27 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('cfg') {
+        stage('pull-code') {
             steps {
                 script {
                     properties([pipelineTriggers([pollSCM('* * * * *')])])
                 }
                 git 'https://github.com/yan-nagler-sw/proj-2.git'
-            }
-        }
-        stage('pull-code') {
-            steps {
-                echo 'Pulling the code...'
-
-                dir('proj-2') {
-                    sh 'rm -rf run'
-                    sh 'mkdir -p run'
-                    sh 'cd run'
-                }
-
-//                sh 'git init'
-//                sh 'git remote add origin https://github.com/yan-nagler-sw/proj-2.git'
-//                sh 'git pull origin master'
             }
         }
         stage('run-py-rest-app') {
