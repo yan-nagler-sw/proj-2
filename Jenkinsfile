@@ -13,13 +13,12 @@ pipeline {
             steps {
                 echo 'Pulling the code...'
 
-                dir('~/Desktop/dev-ops-course/proj/proj-2') {
+                dir('proj-2') {
                     sh 'rm -rf run'
                     sh 'mkdir -p run'
                     sh 'cd run'
                 }
 
-// test
 //                sh 'git init'
 //                sh 'git remote add origin https://github.com/yan-nagler-sw/proj-2.git'
 //                sh 'git pull origin master'
