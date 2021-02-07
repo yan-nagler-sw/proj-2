@@ -16,7 +16,7 @@ pipeline {
         stage('handle-prereq') {
             steps {
                 echo 'Running Python script: backend_testing_db.py...'
-                echo 'py_dir: ${py_dir}'
+                echo "py_dir: $py_dir"
                 sh '''
                     export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     python3.9 backend_testing_db.py
