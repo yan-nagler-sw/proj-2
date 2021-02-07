@@ -19,7 +19,7 @@ pipeline {
 
                 echo 'Copying Selenium WebDriver - Chrome...'
                 sh '''
-                    cp ~/Desktop/dev-ops-course/env/chromedriver .
+                    cp /Users/yannagler/Desktop/dev-ops-course/env/chromedriver .
                 '''
             }
         }
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 echo 'Running Python script: rest_app.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     nohup python3.9 rest_app.py &
                 '''
             }
@@ -36,7 +36,7 @@ pipeline {
             steps {
                 echo 'Running Python script: web_app.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     nohup python3.9 web_app.py &
                 '''
             }
@@ -45,7 +45,7 @@ pipeline {
             steps {
                 echo 'Running Python script: backend_testing.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     python3.9 backend_testing.py
                 '''
             }
@@ -54,7 +54,7 @@ pipeline {
             steps {
                 echo 'Running Python script: frontend_testing.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     python3.9 frontend_testing.py
                 '''
             }
@@ -63,7 +63,7 @@ pipeline {
             steps {
                 echo 'Running Python script: combined_testing.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     python3.9 combined_testing.py
                 '''
             }
@@ -72,7 +72,7 @@ pipeline {
             steps {
                 echo 'Running Python script: clean_environment.py...'
                 sh '''
-                    export PYTHONPATH="~/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     python3.9 clean_environment.py
                 '''
             }
