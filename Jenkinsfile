@@ -2,7 +2,11 @@ pipeline {
     agent any
         environment {
             usr = 'yannagler'
-            py_dir = "/Users/${usr}/Desktop/dev-ops-course/py"
+            crs_dir = "/Users/${usr}/Desktop/dev-ops-course"
+            env_dir = "$crs_dir/env"
+            py_dir = "$crs_dir/py"
+
+            echo "py_dir: $py_dir"
         }
     stages {
         stage('handle-git') {
@@ -16,15 +20,14 @@ pipeline {
         stage('handle-prereq') {
             steps {
                 echo 'Running Python script: backend_testing_db.py...'
-                echo "py_dir: $py_dir"
                 sh '''
-                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    export PYTHONPATH="$py_dir/venv/lib/python3.9/site-packages/:\$PYTHONPATH"
                     python3.9 backend_testing_db.py
                 '''
 
                 echo 'Copying Selenium WebDriver - Chrome...'
                 sh '''
-                    cp /Users/yannagler/Desktop/dev-ops-course/env/chromedriver .
+                    cp $env_dir/chromedriver .
                 '''
             }
         }
