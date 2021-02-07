@@ -17,7 +17,7 @@ echo $PYTHONPATH
 echo
 
 
-python3.9 backend_testing_db.py
+$py backend_testing_db.py
 
 nohup $py rest_app.py &
 nohup $py web_app.py &
