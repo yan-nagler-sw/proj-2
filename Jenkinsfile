@@ -13,7 +13,10 @@ pipeline {
             steps {
                 echo 'Running Python script: rest_app.py...'
 
-                sh 'PYTHONPATH=""; export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"; python3.9 backend_testing_db.py'
+                sh '''
+                    export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
+                    python3.9 backend_testing_db.py
+                '''
             }
         }
         stage('run-py-web-app') {
