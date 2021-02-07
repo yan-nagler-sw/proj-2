@@ -1,5 +1,9 @@
 pipeline {
     agent any
+        environment {
+            usr = 'yannagler'
+            py_dir = "/Users/${usr}/Desktop/dev-ops-course/py"
+        }
     stages {
         stage('handle-git') {
             steps {
