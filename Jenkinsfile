@@ -29,6 +29,7 @@ pipeline {
                 sh '''
                     export PYTHONPATH="/Users/yannagler/Desktop/dev-ops-course/py/venv/lib/python3.9/site-packages/:$PYTHONPATH"
                     nohup python3.9 rest_app.py &
+                    python3.9 backend_testing_rest.py
                 '''
             }
         }
