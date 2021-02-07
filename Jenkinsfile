@@ -28,7 +28,9 @@ pipeline {
 
                 echo "Copying Selenium WebDriver - Chrome..."
                 sh '''
+                    pwd
                     cp $env_dir/chromedriver .
+                    ls -la
                 '''
             }
         }
