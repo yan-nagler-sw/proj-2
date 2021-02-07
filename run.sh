@@ -4,11 +4,11 @@
 set -e
 
 
-usr = 'yannagler'
-crs_dir = "/Users/$usr/Desktop/dev-ops-course"
-py_dir = "$crs_dir/py"
+usr='yannagler'
+crs_dir="/Users/$usr/Desktop/dev-ops-course"
+py_dir="$crs_dir/py"
 
-py = "python3.9"
+py="python3.9"
 pkgs_dir="$py_dir/venv/lib/$py/site-packages"
 
 
