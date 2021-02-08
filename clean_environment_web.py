@@ -9,7 +9,6 @@ print("__name__:", __name__)
 print()
 
 
-rest_url_base = "http://127.0.0.1:30000"
 web_url_base = "http://127.0.0.1:30001"
 
 def stop_server (url_base):
@@ -23,14 +22,6 @@ def stop_server (url_base):
 
 
 try:
-    stop_server(rest_url_base)
-
-except Exception as ex:
-    print("stop_server - REST: {0}".format(ex))
-
-print()
-
-try:
     stop_server(web_url_base)
 
 except Exception as ex:
@@ -38,3 +29,4 @@ except Exception as ex:
 
 print()
 print()
+

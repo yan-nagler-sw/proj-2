@@ -35,7 +35,7 @@ def test ():
 def stop_server ():
     print("stop_server()")
 
-    os.kill(os.getpid(), signal.SIGINT)
+    os.kill(os.getpid(), signal.SIGKILL)
 
     ret_json = {"Status": "Ok"}
     print(ret_json)
